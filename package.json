@@ -1,0 +1,23 @@
+{
+  "name": "i18n-service",
+  "description": "A simple node i18n service",
+  "homepage": "https://github.com/lucasmerencia/i18n-service",
+  "bugs": "https://github.com/lucasmerencia/i18n-service/issues",
+  "license" : "MIT",
+  "contributors" : [
+    {
+      "name" : "Lucas Merencia",
+      "email" : "lucas.merencia@gmail.com",
+      "url": "http://merencia.com"
+    }
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.0",
+    "express-load": "1.1.8"
+  }
+}
