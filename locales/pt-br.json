@@ -2,6 +2,12 @@
   "pt-br" : {
     "hello" : "olá",
     "bye" : "Tchau",
-    "ppk" : "Ppk dlç"
+    "ppk" : "Ppk dlç",
+    "teste" : {
+      "peteca": {
+        "name" : "Nome"
+      }
+    }
+
   }
 }
