@@ -1,4 +1,5 @@
-# i18n-service
+#i18n-service
+[![Build Status](https://travis-ci.org/lucasmerencia/i18n-service.png?branch=master)](https://travis-ci.org/lucasmerencia/i18n-service) [![Code Climate](https://codeclimate.com/repos/52e2b552e30ba02d4f003ad7/badges/fccff24c48efdb6b794d/gpa.png)](https://codeclimate.com/repos/52e2b552e30ba02d4f003ad7/feed)
 
 First you need create a json file in locales folder with the locale name, for example, `en.json`.
 The file content needs to follow the flow structure
