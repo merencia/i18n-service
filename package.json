@@ -15,8 +15,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "test": "NODE_ENV=test LOCALES_FOLDER=./test/locales/ ./node_modules/.bin/istanbul cover _mocha -- -R spec",
-    "posttest" : "./node_modules/.bin/plato -r -d report -x \"node_modules|report\" ."
+    "test": "NODE_ENV=test LOCALES_FOLDER=./test/locales/ ./node_modules/mocha/bin/mocha test/*.js"
   },
   "dependencies": {
     "express": "3.4.0",
@@ -25,8 +24,6 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "supertest": "*",
-    "istanbul" : "*",
-    "plato":"*"
+    "supertest": "*"
   }
 }
