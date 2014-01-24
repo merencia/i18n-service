@@ -7,8 +7,11 @@ module.exports = function(app) {
   * @return <Array> a array with literals  
   */
   var getLiterals = function(req){
-    literals = req.body.literals || req.query.literals
-    return literals ? literals.split(',') : [] 
+    literals = req.body.l || req.query.l
+    if (literals)
+      return Array.isArray(literals) ? literals : literals.split(',')
+    else
+      return []
   }
 
  /**

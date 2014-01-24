@@ -15,25 +15,23 @@ load('models')
   .into(app)
 
 
-localesFolder = __dirname + '/locales/'
+localesFolder = process.env.LOCALES_FOLDER || __dirname + '/locales/'
+
+console.log("> Locales foder: " + localesFolder)
 
 app.locales = {}
-
-fs.readdir(localesFolder, function (err, files) {
-  console.log('loadding locales...')
-  if(!err) {
-    files.forEach(function(file){
-      locale = require( localesFolder + file )
-      for ( key in locale ){
-        app.locales[key] = locale[key]
-      }
-    })
-    console.log("locales loaded!")
-  }else{
-    throw err
+localesFiles = fs.readdirSync(localesFolder)
+console.log('--> loadding locales: ' + localesFiles)
+for(i in localesFiles){
+  file = localesFiles[i]
+  locale = require( localesFolder + file )
+  for ( key in locale ){
+    app.locales[key] = locale[key]
   }
-})
+}
 
 app.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'))
 })
+
+module.exports = app
