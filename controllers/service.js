@@ -7,12 +7,12 @@ module.exports = function(app) {
   * @return <Array> a array with literals  
   */
   var getLiterals = function(req){
-    literals = req.body.l || req.query.l
+    var literals = req.body.l || req.query.l
     if (literals)
       return Array.isArray(literals) ? literals : literals.split(',');
     else
       return [];
-  }
+  };
 
  /**
   * Translata a array of literals
@@ -23,18 +23,18 @@ module.exports = function(app) {
   * @return <Object> a object with translations
   */
   var translate = function(literals, locale){
-    translated = {};
+    var translated = {};
 
     if (literals.length > 0){
-      for (i in literals) {
-        literal = literals[i];
+      for (var i in literals) {
+        var literal = literals[i];
         translated[literal] = find(literal, locale);
       }
     }else{
        translated = locale;
     }
     return translated;
-  }
+  };
 
  /**
   * Find a literal in locale object
@@ -45,8 +45,8 @@ module.exports = function(app) {
   * @return <Object> a object with translations
   */
   var find = function(literal, locale){
-    index = literal.indexOf('.');
-    if(index != -1){
+    var index = literal.indexOf('.');
+    if(index !== -1){
       parent = literal.substring(0, index);
       return find(literal.substring(index + 1), locale[parent]);
     }else {
@@ -57,14 +57,13 @@ module.exports = function(app) {
   var ServiceController = {
     translate: function(req, res) {
 
-      localeName = req.params.locale;
+      var localeName = req.params.locale;
+
       if(app.locales.hasOwnProperty(localeName)){
-        locale = app.locales[localeName];
-
-        literals = getLiterals(req);
-        translated = translate(literals, locale);
-
-        contentType = {"Content-Type": "application/json; charset=utf-8"};
+        var locale = app.locales[localeName];
+        var literals = getLiterals(req);
+        var translated = translate(literals, locale);
+        var contentType = {"Content-Type": "application/json; charset=utf-8"};
 
         res.writeHead(200, contentType);
         res.write(JSON.stringify(translated), 'utf8');
