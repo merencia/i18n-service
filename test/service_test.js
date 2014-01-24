@@ -74,6 +74,7 @@ describe('Translator controller', function(){
           done()
         })
   })
+
   it('should respond with a part of locale by POST', function(done){
     request.post('/en').send({l: "views.partials.navbar"}).expect(200)
         .expect('Content-Type', /json/)
@@ -82,5 +83,9 @@ describe('Translator controller', function(){
           data.should.have.property('title')
           done()
         })
+  })
+
+  it('should respond with 404 for invalid locale', function(done){
+    request.get('/xyz').expect(404, done)
   })
 })

@@ -3,11 +3,11 @@
   "description": "A simple node i18n service",
   "homepage": "https://github.com/lucasmerencia/i18n-service",
   "bugs": "https://github.com/lucasmerencia/i18n-service/issues",
-  "license" : "MIT",
-  "contributors" : [
+  "license": "MIT",
+  "contributors": [
     {
-      "name" : "Lucas Merencia",
-      "email" : "lucas.merencia@gmail.com",
+      "name": "Lucas Merencia",
+      "email": "lucas.merencia@gmail.com",
       "url": "http://merencia.com"
     }
   ],
@@ -15,7 +15,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "test": "NODE_ENV=test LOCALES_FOLDER=./test/locales/ ./node_modules/mocha/bin/mocha test/*.js"
+    "test": "NODE_ENV=test LOCALES_FOLDER=./test/locales/ ./node_modules/.bin/istanbul cover _mocha -- -R spec"
   },
   "dependencies": {
     "express": "3.4.0",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "supertest": "*"
+    "supertest": "*",
+    "istanbul" : "*"
   }
 }
