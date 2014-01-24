@@ -60,4 +60,3 @@ The result will be:
 
 ```
 
->>>>>>> c161868a92fe5f54bb9e661dc723240e54fbc1ef
