@@ -24,6 +24,8 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "supertest": "*"
+    "supertest": "*",
+    "coveralls": "2.3.0",
+    "istanbul": "*"
   }
 }
