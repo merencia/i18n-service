@@ -1,7 +1,7 @@
 test-cov: istanbul
 
 istanbul:
-	LOCALES_FOLDER=./test/locales/ ./node_modules/.bin/istanbul cover _mocha -- -R spec ./test
+	LOCALES_FOLDER=./test/locales/ istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
 
 coveralls:
-	cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
+	cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
