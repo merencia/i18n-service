@@ -1,4 +1,4 @@
-var app = require("../bin/i18n-service")
+var app = require("../i18n-service")
 , should = require('should')
 , request = require('supertest')(app)
 

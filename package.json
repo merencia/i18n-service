@@ -16,7 +16,7 @@
     "start": "./bin/i18n-service",
     "test" : "make test"
   },
-  "main": "./bin/i18n-service",
+  "main": "./i18n-service.js",
   "bin": {
     "i18n-service": "./bin/i18n-service"
   },

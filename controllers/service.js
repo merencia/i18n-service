@@ -15,28 +15,6 @@ var getLiterals = function(req){
 };
 
 /**
-* Translata a array of literals
-*
-* @param <Array> literals to translate
-* @param <Object> a object with literals and translations
-*
-* @return <Object> a object with translations
-*/
-var translate = function(literals, locale){
-  var translated = {};
-
-  if (literals.length > 0){
-    for (var i in literals) {
-      var literal = literals[i];
-      translated[literal] = find(literal, locale);
-    }
-  }else{
-     translated = locale;
-  }
-  return translated;
-};
-
-/**
 * Find a literal in locale object
 * 
 * @param <String> literal 
@@ -52,7 +30,29 @@ var find = function(literal, locale){
   }else {
     return locale[literal];
   }
-}
+};
+
+/**
+* Translata a array of literals
+*
+* @param <Array> literals to translate
+* @param <Object> a object with literals and translations
+*
+* @return <Object> a object with translations
+*/
+var translate = function(literals, locale){
+  var translated = {};
+
+  if (literals.length > 0){
+    for (var i = 0 ; i < literals.length; i++) {
+      var literal = literals[i];
+      translated[literal] = find(literal, locale);
+    }
+  }else{
+     translated = locale;
+  }
+  return translated;
+};
 
 module.exports = function(app) {
   var ServiceController = {

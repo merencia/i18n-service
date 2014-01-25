@@ -6,7 +6,7 @@ test:
 	@NODE_ENV=test LOCALES_FOLDER=$(LOCALES) ./node_modules/mocha/bin/mocha test/*.js
 
 test-cov:
-	@NODE_ENV=test  LOCALES_FOLDER=$(LOCALES) ./node_modules/.bin/istanbul cover \
+	@NODE_ENV=test LOCALES_FOLDER=$(LOCALES) ./node_modules/.bin/istanbul cover \
 		./node_modules/mocha/bin/_mocha -- -R spec
 
 test-coveralls:
