@@ -12,15 +12,25 @@
     }
   ],
   "version": "0.0.1",
-  "private": true,
   "scripts": {
-    "start" : "node app.js",
+    "start": "node ./bin/i18n-service",
     "test" : "make test"
   },
+  "main": "./bin/i18n-service",
+  "bin": {
+    "i18n-service": "./bin/i18n-service"
+  },
+  "keywords": [
+    "i18n",
+    "translator"
+  ],
   "dependencies": {
     "express": "3.4.8",
     "express-load": "1.1.8",
     "mocha-lcov-reporter": "0.0.1"
+  },
+   "engines": {
+    "node": "*"
   },
   "devDependencies": {
     "mocha": "*",
