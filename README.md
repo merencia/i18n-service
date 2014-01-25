@@ -1,5 +1,5 @@
 #i18n-service
-[![Build Status](https://travis-ci.org/lucasmerencia/i18n-service.png?branch=package)](https://travis-ci.org/lucasmerencia/i18n-service) [![Code Climate](https://codeclimate.com/repos/52e2b552e30ba02d4f003ad7/badges/fccff24c48efdb6b794d/gpa.png)](https://codeclimate.com/repos/52e2b552e30ba02d4f003ad7/feed) [![Dependency Status](https://gemnasium.com/lucasmerencia/i18n-service.png)](https://gemnasium.com/lucasmerencia/i18n-service)
+[![Build Status](https://travis-ci.org/lucasmerencia/i18n-service.png?branch=package)](https://travis-ci.org/lucasmerencia/i18n-service) [![Code Climate](https://codeclimate.com/repos/52e2b552e30ba02d4f003ad7/badges/fccff24c48efdb6b794d/gpa.png)](https://codeclimate.com/repos/52e2b552e30ba02d4f003ad7/feed) [![Dependency Status](https://gemnasium.com/lucasmerencia/i18n-service.png)](https://gemnasium.com/lucasmerencia/i18n-service) [![Coverage Status](https://coveralls.io/repos/lucasmerencia/i18n-service/badge.png)](https://coveralls.io/r/lucasmerencia/i18n-service)
 
 A simple i18n service.
 
