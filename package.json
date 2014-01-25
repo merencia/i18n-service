@@ -12,14 +12,22 @@
     }
   ],
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "start": "node ./bin/i18n-service",
-    "test": "NODE_ENV=test LOCALES_FOLDER=./test/locales/ ./node_modules/.bin/mocha test/*.js"
+    "test" : "make test"
   },
+  "main": "./bin/i18n-service",
+  "bin": {
+    "i18n-service": "./bin/i18n-service"
+  },
+  "keywords": [
+    "i18n",
+    "translator"
+  ],
   "dependencies": {
-    "express": "3.4.0",
-    "express-load": "1.1.8"
+    "express": "3.4.8",
+    "express-load": "1.1.8",
+    "mocha-lcov-reporter": "0.0.1"
   },
    "engines": {
     "node": "*"
@@ -27,6 +35,8 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "supertest": "*"
+    "supertest": "*",
+    "coveralls": "2.6.1",
+    "istanbul": "*"
   }
 }
