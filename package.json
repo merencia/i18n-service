@@ -13,7 +13,7 @@
   ],
   "version": "0.0.1",
   "scripts": {
-    "start": "node ./bin/i18n-service",
+    "start": "./bin/i18n-service",
     "test" : "make test"
   },
   "main": "./bin/i18n-service",
