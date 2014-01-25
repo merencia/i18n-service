@@ -12,6 +12,6 @@ test-cov:
 test-coveralls:
 	@NODE_ENV=test  LOCALES_FOLDER=$(LOCALES) ./node_modules/.bin/istanbul cover \
         ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && \
-                cat ./coverage/lcov.info | ./node_modules/.bin/coveralls.js --verbose
+                cat ./coverage/lcov.info | ./node_modules/.bin/coveralls --verbose
 
 .PHONY: all test clean
