@@ -24,7 +24,7 @@ if (process.env.LOCALES_FOLDER){
   console.log('--> loadding locales: ' + localesFiles);
   for( var i in localesFiles ){
     file = localesFiles[i];
-    locale = require( "../"+localesFolder + file );
+    locale = require( localesFolder + file );
     for ( var key in locale ){
       app.locales[key] = locale[key];
     }
