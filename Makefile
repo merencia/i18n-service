@@ -1,4 +1,4 @@
-LOCALES=./test/locales/
+LOCALES=`pwd`/test/locales/
 
 test:
 	# @$(MAKE) lint
