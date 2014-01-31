@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var express = require('express'),
-    load    = require('express-load'), 
     fs      = require('fs'), 
     app     = express(),
     service = require('./controllers/service'),
